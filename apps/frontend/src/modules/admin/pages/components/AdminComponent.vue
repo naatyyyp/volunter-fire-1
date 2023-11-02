@@ -8,9 +8,6 @@
                 color="primary" variant="text" :active="section==='history'"
                 @click="section='history'"    
             >Historia</v-btn>
-            <v-btn color="primary" variant="text" :active="section==='donations'"
-                @click="section='donations'"
-            >Donaciones</v-btn>
         </v-col>
         <v-col cols="12">
             <contact-administration v-if="section==='contact'"/>

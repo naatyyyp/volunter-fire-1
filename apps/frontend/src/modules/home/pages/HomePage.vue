@@ -10,19 +10,16 @@
             <v-row>
                 <v-col cols="12" md="4">
                     <v-card height="400">
-                        <v-card-title>Publicación 1</v-card-title> 
                         <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbvlanusoficial%2Fposts%2Fpfbid02QBWQRtdmoFB7MxzeGeLGVEQCjUgAm86D2BGhiKsukSFyrqcZPvMtDFcFpxBT5bFRl&show_text=true&width=500" width="500" height="665" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                     </v-card>
                 </v-col>
                 <v-col cols="12" md="4">
                     <v-card height="400">
-                        <v-card-title>Publicación 2</v-card-title>
                         <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbvlanusoficial%2Fposts%2Fpfbid0iWERyGrqC7XKt9jU7nELrRcNHmJhavrUxkW3drW5YWASBfrAhAUscxQfuPtPXBBKl&show_text=true&width=500" width="500" height="486" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                     </v-card>
                 </v-col>
                 <v-col cols="12" md="4">
                     <v-card height="400">
-                        <v-card-title>Publicación 3</v-card-title>
                         <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fbvlanusoficial%2Fposts%2Fpfbid0iFvepizMaUGmTiKSgz27eP7TRACy4XrWZSnRstaQQ9Cu5BF59JL6sgVZXduWmRXQl&show_text=true&width=500" width="500" height="684" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                     </v-card>
                 </v-col>

@@ -48,7 +48,7 @@
       class="d-flex child-flex"
       cols="4"
     >
-      <v-img src="../assets/"
+      <v-img src="../assets/placas2.jpeg"
         cover
         class="bg-grey-lighten-2"
       >
@@ -59,7 +59,7 @@
       class="d-flex child-flex"
       cols="4"
     >
-      <v-img src="../assets/placa.JPG"
+      <v-img src="../assets/biblioteca2.jpeg"
         cover
         class="bg-grey-lighten-2"
       >

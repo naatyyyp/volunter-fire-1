@@ -64,9 +64,9 @@ const historyUpdateController = async (req, res) => {
         }
 
         
-        const history = await historyUpdateService(id, { title, subtitle, googleMapsUrl });
+        const history = await historyUpdateService(id, { photo, title, description });
 
-        // Si el contacto se actualizó exitosamente:
+        // Si la parte de historia se actualizó exitosamente:
         return res.status(200).json(history)
         }
         

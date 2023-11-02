@@ -16,9 +16,9 @@
                 </template>
                 <template v-slot:[`item.actions`]="{ item }">
                     <v-btn color="purple" icon="mdi-pencil" size="40" class="mx-1"></v-btn>
-                    <v-btn color="red" icon="mdi-delete" size="40" class="mx-1"></v-btn>
+                    <v-btn color="red" icon="mdi-delete" size="40value" class="mx-1"></v-btn>
                 </template>
-            </v-data-table>
+            </v-data-table>h
         </v-card-text>
     </v-card>
 </template>
@@ -30,7 +30,7 @@
     export default {
         name: 'history-administration',
         components: {
-            HistoryCreateModal
+            HistoryCreateModal,
         },
         data: () => ({
             headers: [

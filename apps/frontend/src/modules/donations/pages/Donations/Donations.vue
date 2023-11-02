@@ -69,11 +69,6 @@
             name: 'Bomberos Voluntarios Lanús',
             cbu: '0000003100076208932278',
             rating: 0,
-            message: '',
-            messageRule: [
-                v => !!v || 'Este campo es obligatorio',
-                v => v.length < 50 || 'El mensaje debe tener menos de 50 caracteres'
-            ],
             formValue: true,
         })
     }
