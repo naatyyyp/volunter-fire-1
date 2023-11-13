@@ -27,7 +27,8 @@
             HistoryAdministration
         },
         data: () => ({
-            section: 'contact'
+            section: 'contact',
+            section: 'history'
         })
     }
 </script>

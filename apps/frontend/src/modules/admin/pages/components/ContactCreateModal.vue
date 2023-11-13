@@ -4,7 +4,7 @@
             <v-toolbar color="primary">
                 <v-row class="ma-0 pa-0">
                     <v-col cols="10">
-                        <v-card-title>Crear un nuevo contacto</v-card-title>
+                        <v-card-title>{{ form.id ? 'Editar' : 'Crear' }} un nuevo contacto</v-card-title>
                     </v-col>
                     <v-col cols="2" class="text-end">
                         <v-btn icon="mdi-close" @click="dialog = false"></v-btn>

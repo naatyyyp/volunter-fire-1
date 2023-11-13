@@ -13,7 +13,7 @@ const jwt = require ('jsonwebtoken');
 const historyCreateController = async (req, res) => {
     // Ejecutar diferentes middlewares para validación
 
-    // Ejecutar un servicio para datos de contactos con sus respectivos cuarteles
+    // Ejecutar un servicio para datos de historias con sus respectivas descripciones
     const { photo, title, description } = req.body;
 
     // Validar los campos requeridos
@@ -24,10 +24,10 @@ const historyCreateController = async (req, res) => {
     }
 
     try {
-        // Aquí ejecutarías el servicio para crear el contacto
+        // Aquí ejecutarías el servicio para crear la historia
         const history = await historyCreateService({ photo, title, description });
 
-        // Si el contacto se creó exitosamente
+        // Si la historia se creó exitosamente
         res.status(201).json(history);
     } catch (error) {
         let status = 500;
@@ -35,7 +35,7 @@ const historyCreateController = async (req, res) => {
 
         if(error.code == 11000){
             status = 400
-            message = 'la dirección de contacto ya existe'
+            message = 'la url de historia ya existe'
         }
 
         res.status(status).json({
@@ -76,7 +76,7 @@ const historyUpdateController = async (req, res) => {
 
         if(error.code == 11000){
             status = 400
-            message = 'La dirección de contacto ya existe'
+            message = 'La dirección de historia ya existe'
         }
 
         res.status(status).json({
@@ -92,9 +92,10 @@ const historyDeleteController = async (req, res) => {
         const deleteHistory = await historyDeleteService(id)
         return res.status(200).json(deleteHistory)
     } catch (error) {
+        console.error(error);
         return res.status(500).json({
             error,
-            message: 'Ocurrio un error'
+            message: 'Ocurrio un error al eliminar la historia'
         })
     }
 };
@@ -105,5 +106,5 @@ module.exports = {
     historyFetchAllController,
     historyUpdateController,
     historyDeleteController
-    // Agrega aquí otros controladores relacionados con contactos si es necesario
+    // Agrega aquí otros controladores relacionados con historias si es necesario
 }

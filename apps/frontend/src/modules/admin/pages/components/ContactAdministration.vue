@@ -12,8 +12,9 @@
         <v-card-text>
             <v-data-table :items="items" :headers="headers" :loading="loading">
                 <template v-slot:item.actions="{ item }">
-                    <v-btn color="purple" icon="mdi-pencil" size="40" class="mx-1"></v-btn>
-                    <v-btn color="red" icon="mdi-delete" size="40" class="mx-1"></v-btn>
+                    <v-btn color="purple" icon="mdi-pencil" size="40" class="mx-1" @click="editContact(item)"></v-btn>
+                    <contact-create-modal :value="openCreateModal" @input="value => openCreateModal = value" @created="item => items.unshift(item)"/>
+                    <v-btn color="red" icon="mdi-delete" size="40" class="mx-1" @click="deleteContact(item)"></v-btn>
                 </template>
             </v-data-table>
         </v-card-text>
@@ -56,18 +57,43 @@ import ContactCreateModal from './ContactCreateModal.vue'
 
                     const { data } = await axios.get(URL)
 
-                    this.items = data.reverse()
-                } catch (error) {
-                    console.error(error)
-                } finally {
-                    this.loading = false
-                }
-            }
-        },
-        mounted(){
-            this.fetchContacts()
+                this.items = data.map(contact => ({ ...contact, id: contact._id })).reverse();
+                    } catch (error) {
+                console.error(error);
+                    } finally {
+                this.loading = false;
+                    }
+            },
+            
+        async editContact(contact) {
+        // Abre el modal de creación con la información del contacto seleccionado
+        this.form = { ...contact };
+        this.dialog = true;
+           },
+
+        async deleteContact(contact) {
+        // Lógica para eliminar el contacto
+        try {
+            
+           
+       const URL = `http://localhost:4040/api/contact/${contact._id}`;
+            
+           
+        await axios.delete(URL);
+            // Actualizar la lista después de la eliminación
+            this.fetchContacts();
+        } catch (error) {
+            console.error(error);
         }
     }
+},
+        mounted()
+        {
+            this.fetchContacts()
+        }
+}
+        
+    
 </script>
 
 <style lang="scss" scoped>
